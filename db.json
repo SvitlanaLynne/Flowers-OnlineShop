@@ -1,0 +1,81 @@
+{
+  "flowers": [
+    {
+      "Roses": [
+        {
+          "id": 1,
+          "name": "Rose Gold",
+          "color": "yellow",
+          "picture": "yellow_rose.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Rose Heart",
+          "color": "red"
+        },
+        {
+          "id": 3,
+          "name": "Rose Sunset",
+          "color": "orange"
+        }
+      ]
+    },
+    {
+      "Tulips": [
+        {
+          "id": 4,
+          "name": "Tulip Classic",
+          "color": "red"
+        },
+        {
+          "id": 5,
+          "name": "Tulip Sunshine",
+          "color": "yellow"
+        },
+        {
+          "id": 6,
+          "name": "Tulip Purple Majesty",
+          "color": "purple"
+        }
+      ]
+    },
+    {
+      "Lilies": [
+        {
+          "id": 7,
+          "name": "Lily White Elegance",
+          "color": "white"
+        },
+        {
+          "id": 8,
+          "name": "Lily Pink Delight",
+          "color": "pink"
+        },
+        {
+          "id": 9,
+          "name": "Lily Sunshine Yellow",
+          "color": "yellow"
+        }
+      ]
+    },
+    {
+      "Daisies": [
+        {
+          "id": 10,
+          "name": "Daisy Pure White",
+          "color": "white"
+        },
+        {
+          "id": 11,
+          "name": "Daisy Sunshine Yellow",
+          "color": "yellow"
+        },
+        {
+          "id": 12,
+          "name": "Daisy Pretty Pink",
+          "color": "pink"
+        }
+      ]
+    }
+  ]
+}
