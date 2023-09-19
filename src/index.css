@@ -1,13 +1,30 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import "./components/css/App.css";
+@import "./components/css/HomePage.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,300;1,300&display=swap");
+
+:root {
+  --light-grey: #ecf0f1;
+  --deep-purple: #301551;
+  --gold: #e3c51a;
+  --light-lavender: #a389f4;
+  --soft-violet: #7a61bf;
+  --warm-yellow: #f49542;
+  --dark-indigo: #120e23;
+  --dark-green: #005700;
+  --lime-green: #c0eb75;
+  --teal-green: #007b86;
+  --dark-grey: #333333;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  /* font-family: "Pacifico", cursive; */
+  font-family: "Roboto", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+  color: var(--dark-grey);
+  background-color: var(--light-grey);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
