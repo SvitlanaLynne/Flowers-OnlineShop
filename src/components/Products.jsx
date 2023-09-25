@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import DropDownMenu from "./DropDownMenu";
+import Sorting from "./Sorting";
 
 function Products() {
   const [data, setData] = useState([]);
@@ -8,6 +9,7 @@ function Products() {
   const [selectedFilters, setSelectedFilters] = useState([]);
   const [rowsNumber, setRowsNumber] = useState(10);
   const rowsNumberArr = ["", 5, 10, 15];
+  const [order, setOrder] = useState({ direction: "asc" });
 
   useEffect(() => {
     fetch("http://localhost:3000/flowers")
@@ -18,19 +20,32 @@ function Products() {
         setFilterCategory([...new Set(data.map((flower) => flower.category))]);
         setFilterColor([...new Set(data.map((flower) => flower.color))]);
 
-        const filteredData = data.filter((flower) =>
-          selectedFilters.includes(flower.category) ||
-          selectedFilters.includes(flower.color)
-            ? flower
-            : data,
-        );
+        const filteredData = data.filter((flower) => {
+          if (
+            selectedFilters.length === 0 ||
+            selectedFilters.includes(flower.category) ||
+            selectedFilters.includes(flower.color)
+          ) {
+            return true;
+          } else {
+            return false;
+          }
+        });
+
+        // ------ SORTING -----
+
+        const sortedData =
+          order.direction === "asc"
+            ? filteredData.sort((a, b) => a.id - b.id)
+            : filteredData.sort((a, b) => b.id - a.id);
+
         // ------ ROWS -----
 
-        const filteredSlicedData = filteredData.slice(0, rowsNumber);
+        const filteredSortedSlicedData = sortedData.slice(0, rowsNumber);
 
-        setData(filteredSlicedData);
+        setData(filteredSortedSlicedData);
       });
-  }, [selectedFilters, rowsNumber]);
+  }, [selectedFilters, rowsNumber, order]);
 
   const handleCheckboxChange = (event) => {
     const filterOption = event.target.name;
@@ -47,6 +62,15 @@ function Products() {
 
   const handleRowNumberChange = (event) => {
     setRowsNumber(event.target.value === "" ? 10 : event.target.value);
+  };
+
+  const handleSorting = () => {
+    //change icon
+    setOrder((prevOrder) => ({
+      direction: prevOrder.direction === "asc" ? "desc" : "asc",
+    }));
+
+    // sort data if asc
   };
 
   return (
@@ -88,7 +112,9 @@ function Products() {
       <table>
         <thead>
           <tr>
-            <th>Id</th>
+            <th>
+              <Sorting handleSorting={handleSorting} order={order} />
+            </th>
             <th>Title</th>
             <th>Color</th>
             <th>Picture</th>
