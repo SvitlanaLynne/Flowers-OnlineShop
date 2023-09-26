@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import DropDownMenu from "./DropDownMenu";
 import Sorting from "./Sorting";
+import { Link } from "react-router-dom";
+import { useFlowersDataContext } from "./FlowersDataContext";
 
 function Products() {
-  const [data, setData] = useState([]);
+  const data = useFlowersDataContext();
+  const [filteredAndSortedData, setFilteredAndSortedData] = useState([]);
   const [filterCategory, setFilterCategory] = useState([]);
   const [filterColor, setFilterColor] = useState([]);
   const [selectedFilters, setSelectedFilters] = useState([]);
@@ -12,40 +15,36 @@ function Products() {
   const [order, setOrder] = useState({ direction: "asc" });
 
   useEffect(() => {
-    fetch("http://localhost:3000/flowers")
-      .then((res) => res.json())
-      .then((data) => {
-        // ----- FILTER -----
+    // ----- FILTER -----
 
-        setFilterCategory([...new Set(data.map((flower) => flower.category))]);
-        setFilterColor([...new Set(data.map((flower) => flower.color))]);
+    setFilterCategory([...new Set(data.map((flower) => flower.category))]);
+    setFilterColor([...new Set(data.map((flower) => flower.color))]);
 
-        const filteredData = data.filter((flower) => {
-          if (
-            selectedFilters.length === 0 ||
-            selectedFilters.includes(flower.category) ||
-            selectedFilters.includes(flower.color)
-          ) {
-            return true;
-          } else {
-            return false;
-          }
-        });
+    const filteredData = data.filter((flower) => {
+      if (
+        selectedFilters.length === 0 ||
+        selectedFilters.includes(flower.category) ||
+        selectedFilters.includes(flower.color)
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    });
 
-        // ------ SORTING -----
+    // ------ SORTING -----
 
-        const sortedData =
-          order.direction === "asc"
-            ? filteredData.sort((a, b) => a.id - b.id)
-            : filteredData.sort((a, b) => b.id - a.id);
+    const sortedData =
+      order.direction === "asc"
+        ? filteredData.sort((a, b) => a.id - b.id)
+        : filteredData.sort((a, b) => b.id - a.id);
 
-        // ------ ROWS -----
+    // ------ ROWS -----
 
-        const filteredSortedSlicedData = sortedData.slice(0, rowsNumber);
+    const filteredSortedSlicedData = sortedData.slice(0, rowsNumber);
 
-        setData(filteredSortedSlicedData);
-      });
-  }, [selectedFilters, rowsNumber, order]);
+    setFilteredAndSortedData(filteredSortedSlicedData);
+  }, [selectedFilters, rowsNumber, order, data]);
 
   const handleCheckboxChange = (event) => {
     const filterOption = event.target.name;
@@ -65,12 +64,9 @@ function Products() {
   };
 
   const handleSorting = () => {
-    //change icon
     setOrder((prevOrder) => ({
       direction: prevOrder.direction === "asc" ? "desc" : "asc",
     }));
-
-    // sort data if asc
   };
 
   return (
@@ -122,10 +118,12 @@ function Products() {
           </tr>
         </thead>
         <tbody>
-          {data.map((flower) => (
+          {filteredAndSortedData.map((flower) => (
             <tr key={flower.id}>
               <td>{flower.id}</td>
-              <td>{flower.name}</td>
+              <td>
+                <Link to={`/product/${flower.id}`}>{flower.name}</Link>
+              </td>
               <td>{flower.color}</td>
               <td>
                 <img

@@ -5,6 +5,7 @@
       "name": "Buttercup",
       "color": "yellow",
       "category": "wedding",
+      "description": "A vibrant yellow flower, perfect for weddings.",
       "picture": "buttercup.png",
       "price": 5.0
     },
@@ -13,6 +14,7 @@
       "name": "Crocus",
       "color": "purple",
       "category": "spring",
+      "description": "A lovely purple flower that blooms in spring.",
       "picture": "crocus.png",
       "price": 6.0
     },
@@ -21,6 +23,7 @@
       "name": "Daffodil",
       "color": "yellow",
       "category": "spring",
+      "description": "Bright yellow spring flower.",
       "picture": "daffodil.png",
       "price": 7.0
     },
@@ -29,6 +32,7 @@
       "name": "Daisy",
       "color": "white",
       "category": "wedding",
+      "description": "A classic white flower often chosen for weddings.",
       "picture": "daisy.png",
       "price": 5.5
     },
@@ -37,6 +41,7 @@
       "name": "Forget-Me-Not",
       "color": "blue",
       "category": "summer",
+      "description": "Delicate blue flowers that thrive in the summer.",
       "picture": "forget_me_not.png",
       "price": 6.5
     },
@@ -45,6 +50,7 @@
       "name": "Grape Hyacinth",
       "color": "purple",
       "category": "spring",
+      "description": "Beautiful purple blooms, a symbol of spring.",
       "picture": "grape_hyacinth.png",
       "price": 7.5
     },
@@ -53,6 +59,7 @@
       "name": "Hepatica",
       "color": "blue",
       "category": "spring",
+      "description": "Charming blue spring flowers.",
       "picture": "hepatica.png",
       "price": 5.0
     },
@@ -61,6 +68,7 @@
       "name": "Hyacinth",
       "color": "pink",
       "category": "spring",
+      "description": "Lovely pink spring flower.",
       "picture": "hyacinth.png",
       "price": 6.0
     },
@@ -69,6 +77,7 @@
       "name": "Iris",
       "color": "blue",
       "category": "new arrival",
+      "description": "Exquisite blue iris flowers, a new arrival.",
       "picture": "iris.png",
       "price": 7.5
     },
@@ -77,6 +86,7 @@
       "name": "Lily of the Valley",
       "color": "white",
       "category": "wedding",
+      "description": "Elegant white flowers, perfect for weddings.",
       "picture": "lily_of_the_valley.png",
       "price": 5.5
     },
@@ -85,6 +95,7 @@
       "name": "Pansy",
       "color": "purple",
       "category": "summer",
+      "description": "Vibrant purple pansies that bloom in the summer.",
       "picture": "pansy.png",
       "price": 6.5
     },
@@ -93,6 +104,7 @@
       "name": "Primula",
       "color": "pink",
       "category": "spring",
+      "description": "Pretty pink primula flowers.",
       "picture": "primula.png",
       "price": 7.0
     },
@@ -101,6 +113,7 @@
       "name": "Snowdrop",
       "color": "white",
       "category": "spring",
+      "description": "Delicate white snowdrop flowers.",
       "picture": "snowdrop.png",
       "price": 5.5
     },
@@ -109,6 +122,7 @@
       "name": "Tulip",
       "color": "red",
       "category": "spring",
+      "description": "Vibrant red tulip flowers.",
       "picture": "tulip.png",
       "price": 7.0
     },
@@ -117,6 +131,7 @@
       "name": "Violet",
       "color": "purple",
       "category": "wedding",
+      "description": "Elegant purple violets, perfect for weddings.",
       "picture": "violet.png",
       "price": 8.0
     }
