@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The array of selected filters is filled when the filter is selected 1`] = `
+<div>
+  <div>
+    <div>
+      <div>
+        Buttercup
+        , 
+        wedding
+        , 
+        yellow
+      </div>
+      <div>
+        Crocus
+        , 
+        spring
+        , 
+        purple
+      </div>
+      <div>
+        Daffodil
+        , 
+        spring
+        , 
+        yellow
+      </div>
+      <button>
+        Click Me
+      </button>
+    </div>
+  </div>
+</div>
+`;
