@@ -17,7 +17,7 @@
   --dark-grey: #333333;
 }
 
-body {
+html {
   margin: 0;
   /* font-family: "Pacifico", cursive; */
   font-family: "Roboto", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
@@ -27,4 +27,18 @@ body {
   background-color: var(--light-grey);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  color: var(--light-lavender);
 }

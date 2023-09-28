@@ -70,41 +70,7 @@ function Products() {
   };
 
   return (
-    <>
-      {/* ----- filters ----- */}
-      <div>
-        <button onClick={handleResetFilers}>Clear Filters</button>
-        <span>Category</span>
-        {filterCategory.map((filter) => (
-          <label key={filter}>
-            <input
-              name={filter}
-              type="checkbox"
-              checked={selectedFilters.includes(filter)}
-              onChange={handleCheckboxChange}
-            />
-            {filter}
-          </label>
-        ))}
-        <span>Color</span>
-        {filterColor.map((filter) => (
-          <label key={filter}>
-            <input
-              name={filter}
-              type="checkbox"
-              checked={selectedFilters.includes(filter)}
-              onChange={handleCheckboxChange}
-            />
-            {filter}
-          </label>
-        ))}
-      </div>
-      {/* ----- rows selection ----- */}
-      <DropDownMenu
-        rowsNumberArr={rowsNumberArr}
-        handleRowNumberChange={handleRowNumberChange}
-      />
-      {/* ----- products ----- */}
+    <div id="products-Container">
       <table>
         <thead>
           <tr>
@@ -137,7 +103,47 @@ function Products() {
           ))}
         </tbody>
       </table>
-    </>
+      <div id="filter-rows-Container">
+        {/* ----- filters ----- */}
+        <div id="filters-Container">
+          <button onClick={handleResetFilers}>Clear Filters</button>
+          <div className="filter">
+            <span>Category</span>
+            {filterCategory.map((filter) => (
+              <label key={filter}>
+                <input
+                  name={filter}
+                  type="checkbox"
+                  checked={selectedFilters.includes(filter)}
+                  onChange={handleCheckboxChange}
+                />
+                {filter}
+              </label>
+            ))}
+          </div>
+          <div className="filter">
+            <span>Color</span>
+            {filterColor.map((filter) => (
+              <label key={filter}>
+                <input
+                  name={filter}
+                  type="checkbox"
+                  checked={selectedFilters.includes(filter)}
+                  onChange={handleCheckboxChange}
+                />
+                {filter}
+              </label>
+            ))}
+          </div>
+        </div>
+        {/* ----- rows selection ----- */}
+        <DropDownMenu
+          rowsNumberArr={rowsNumberArr}
+          handleRowNumberChange={handleRowNumberChange}
+        />
+      </div>
+      {/* ----- products ----- */}
+    </div>
   );
 }
 

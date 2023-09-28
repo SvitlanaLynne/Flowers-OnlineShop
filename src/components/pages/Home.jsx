@@ -5,7 +5,6 @@ function Home() {
   return (
     <div>
       <Logo />
-      <span>Welcome to our Home Page!</span>
       <Products />
     </div>
   );
