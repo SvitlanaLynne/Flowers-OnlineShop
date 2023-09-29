@@ -8,8 +8,8 @@ It includes key functionality such as fetching product data, routing, and more.
 
 ## Key Features
 
-*Homepage: Browse through a table of products, apply filters, and sort by various criteria.
-*Product Details: Click on a product to view its details on a separate page using React Router.
+_Homepage:_ Browse through a table of products, apply filters, and sort by various criteria.
+_Product Details:_ Click on a product to view its details on a separate page using React Router.
 Let's get started!
 
 ## Deeper into dev details:
