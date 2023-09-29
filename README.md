@@ -25,7 +25,7 @@ The primary goal of the "Flowers" project was to enhance my Frontend coding skil
 
 Here are some screenshots of the Flower shop!
 
-## Homepage with the logo, table of products, filters, row number selection, sortable Id and clickable Titles
+## Homepage with the logo, table of products, filters, row number selection, sortable Id and clickable titles
 
 ![Screenshot](./src/components/assets/flowers_onlineShop_HomePage.jpg)
 
@@ -41,3 +41,39 @@ Here are some screenshots of the Flower shop!
 
 ![Screenshot](./src/components/assets/flowers_onlineShop_Details_1.jpg)
 ![Screenshot](./src/components/assets/flowers_onlineShop_Details_2.jpg)
+
+## My data base sample used in the project:
+
+```json
+{
+  "flowers": [
+    {
+      "id": 1,
+      "name": "Buttercup",
+      "color": "yellow",
+      "category": "wedding",
+      "description": "A vibrant yellow flower, perfect for weddings.",
+      "picture": "buttercup.png",
+      "price": 5.0
+    },
+    {
+      "id": 2,
+      "name": "Crocus",
+      "color": "purple",
+      "category": "spring",
+      "description": "A lovely purple flower that blooms in spring.",
+      "picture": "crocus.png",
+      "price": 6.0
+    },
+    {
+      "id": 3,
+      "name": "Daffodil",
+      "color": "yellow",
+      "category": "spring",
+      "description": "Bright yellow spring flower.",
+      "picture": "daffodil.png",
+      "price": 7.0
+    }
+  ]
+}
+```
