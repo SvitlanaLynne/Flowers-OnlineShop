@@ -1,4 +1,43 @@
 # Flowers - online shop sample
 
-This project is currently in development, so please return at a later time to revisit it.
+Welcome to the "Flowers" project, a basic online shop built with React!
+"Flowers" is a simple yet functional online shop.
+Browse through product listings, apply filters, and enjoy the convenience of sorting features.
 
+It includes key functionality such as fetching product data, routing, and more.
+
+## Key Features
+
+Homepage: Browse through a table of products, apply filters, and sort by various criteria.
+Product Details: Click on a product to view its details on a separate page using React Router.
+Let's get started!
+
+## Deeper into dev details:
+
+- Home and Product Details pages with components like logos, buttons, and icons.
+- Fetching and displaying product data from a database in a table format.
+- Database simulation using json-server.
+- Implementation of sorting and filtering capabilities.
+- Utilization of routing for navigation between pages.
+- Design was not developed for this project, it showcases the functionality only, so basic css and sample images were implemented.
+
+The primary goal of the "Flowers" project was to enhance my Frontend coding skills. I also gained a valuable practice in testing, environment setup, including Estlint and Prettier, and version control.
+
+Here are some screenshots of the Flower shop!
+
+## Homepage with the logo, table of products, filters, row number selection, sortable Id and clickable Titles
+
+![Screenshot](./src/components/assets/flowers_onlineShop_HomePage.jpg)
+
+## Filtering
+
+![Screenshot](./src/components/assets/flowers_onlineShop_HomePage_Filters.jpg)
+
+## Sorting
+
+![Screenshot](./src/components/assets/flowers_onlineShop_HomePage_Sorting.jpg)
+
+## Product details on a separate page (Router)
+
+![Screenshot](./src/components/assets/flowers_onlineShop_Details_1.jpg)
+![Screenshot](./src/components/assets/flowers_onlineShop_Details_2.jpg)
