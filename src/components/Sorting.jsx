@@ -3,14 +3,15 @@ import { faCaretUp, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 function Sorting({ order, handleSorting }) {
   return (
-    <>
-      <div onClick={handleSorting}>Id</div>
+    <button onClick={handleSorting}>
+      <span>Id</span>
+      <br></br>
       <div>
         <FontAwesomeIcon
           icon={order.direction === "asc" ? faCaretDown : faCaretUp}
         />
       </div>
-    </>
+    </button>
   );
 }
 

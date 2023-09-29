@@ -70,6 +70,7 @@ function Products() {
   };
 
   return (
+    //  ----- products -----
     <div id="products-Container">
       <table>
         <thead>
@@ -77,7 +78,7 @@ function Products() {
             <th>
               <Sorting handleSorting={handleSorting} order={order} />
             </th>
-            <th>Title</th>
+            <th className="textAlignedLeft">Title</th>
             <th>Color</th>
             <th>Picture</th>
             <th>Price</th>
@@ -87,7 +88,7 @@ function Products() {
           {filteredAndSortedData.map((flower) => (
             <tr key={flower.id}>
               <td>{flower.id}</td>
-              <td>
+              <td className="textAlignedLeft">
                 <Link to={`/product/${flower.id}`}>{flower.name}</Link>
               </td>
               <td>{flower.color}</td>
@@ -103,8 +104,8 @@ function Products() {
           ))}
         </tbody>
       </table>
+      {/*  ----- filters ----- */}
       <div id="filter-rows-Container">
-        {/* ----- filters ----- */}
         <div id="filters-Container">
           <button onClick={handleResetFilers}>Clear Filters</button>
           <div className="filter">
@@ -142,7 +143,6 @@ function Products() {
           handleRowNumberChange={handleRowNumberChange}
         />
       </div>
-      {/* ----- products ----- */}
     </div>
   );
 }

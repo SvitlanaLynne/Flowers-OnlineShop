@@ -2,38 +2,42 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  outline: 1px blue solid;
 }
 
 #logo {
   height: 200px;
-  outline: 1px black solid;
 }
 
 #products-Container {
   display: flex;
   justify-content: center;
-  outline: grey solid 1px;
 }
 
 /* ---------- Table ----------*/
 table {
-  outline: 1px yellow solid;
+  width: 50%;
+  border-collapse: collapse;
+  text-align: center;
 }
+
+.textAlignedLeft {
+  text-align: left;
+}
+
 .flower_picture {
   height: 80px;
 }
 
 /* ---------- Filters ----------*/
+
 #filter-rows-Container {
-  outline: 1px green solid;
+  margin-left: 2rem;
 }
 
 #filters-Container {
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
-  outline: 2px solid gray;
 
   margin-bottom: 2rem;
 }
@@ -58,14 +62,12 @@ input[type="checkbox"] {
   border: 2px solid var(--dark-green);
   border-radius: 4px;
   outline: none;
-  /* margin-right: 0.3rem; */
 }
 
 label {
   display: flex;
   align-items: center;
   margin-bottom: 0.5rem;
-  outline: 1px purple solid;
 }
 
 input[type="checkbox"]:checked {
@@ -73,45 +75,14 @@ input[type="checkbox"]:checked {
 }
 
 /* ---------- Rows ----------*/
-
-.select-Container {
-  position: relative;
-  display: inline-block;
-}
-
-.select-Container select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
+select {
+  border: none;
   background: transparent;
-  border: none;
-  width: 30px;
-  height: 20px;
-
-  cursor: pointer;
+  margin: 0 6px;
 }
 
-.select-Container .select-arrow {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  pointer-events: none;
-  font-size: 16px;
-}
-
-.select-Container select:focus {
-  border: none;
+select:focus {
   outline: none;
-}
-
-.select-Container select:focus + .select-arrow {
-  display: none;
-}
-
-.select-Container select option {
-  padding: 5px;
-  background-color: #fff;
-  color: var(--dark-green);
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px 3px var(--light-lavender);
 }

@@ -1,5 +1,6 @@
 @import "./components/css/App.css";
 @import "./components/css/HomePage.css";
+@import "./components/css/DetailsPage.css";
 
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,300;1,300&display=swap");
 
@@ -41,4 +42,15 @@ button {
 
 button:hover {
   color: var(--light-lavender);
+  cursor: pointer;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  cursor: pointer;
 }

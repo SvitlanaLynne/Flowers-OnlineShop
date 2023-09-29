@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useFlowersDataContext } from "./FlowersDataContext";
+import Logo from "./Logo";
 
 function Details() {
   const data = useFlowersDataContext();
@@ -18,13 +19,17 @@ function Details() {
   };
 
   return (
-    <>
+    <div id="Container">
+      <Logo />
       <button onClick={handleGoBack}>Go Back</button>
-      <h1>{flower.name}</h1>
-      <img src={`${process.env.PUBLIC_URL}/images/${flower.picture}`} />
-      <p>{flower.description}</p>
-      <div>$&nbsp;{flower.price}</div>
-    </>
+
+      <div id="product-Container">
+        <h2>{flower.name}</h2>
+        <img src={`${process.env.PUBLIC_URL}/images/${flower.picture}`} />
+        <p>{flower.description}</p>
+        <span>$&nbsp;{flower.price}</span>
+      </div>
+    </div>
   );
 }
 
