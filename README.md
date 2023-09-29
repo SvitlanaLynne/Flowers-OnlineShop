@@ -8,8 +8,8 @@ It includes key functionality such as fetching product data, routing, and more.
 
 ## Key Features
 
-Homepage: Browse through a table of products, apply filters, and sort by various criteria.
-Product Details: Click on a product to view its details on a separate page using React Router.
+*Homepage: Browse through a table of products, apply filters, and sort by various criteria.
+*Product Details: Click on a product to view its details on a separate page using React Router.
 Let's get started!
 
 ## Deeper into dev details:
@@ -23,7 +23,7 @@ Let's get started!
 
 The primary goal of the "Flowers" project was to enhance my Frontend coding skills. I also gained a valuable practice in testing, environment setup, including Estlint and Prettier, and version control.
 
-Here are some screenshots of the Flower shop!
+Here are some screenshots of the Flower shop.
 
 ## Homepage with the logo, table of products, filters, row number selection, sortable Id and clickable titles
 
