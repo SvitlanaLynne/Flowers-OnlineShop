@@ -42,7 +42,7 @@
       "color": "blue",
       "category": "summer",
       "description": "Delicate blue flowers that thrive in the summer.",
-      "picture": "forget_me_not.png",
+      "picture": "Forget-Me-Not.png",
       "price": 6.5
     },
     {
@@ -51,7 +51,7 @@
       "color": "purple",
       "category": "spring",
       "description": "Beautiful purple blooms, a symbol of spring.",
-      "picture": "grape_hyacinth.png",
+      "picture": "Grape Hyacinth.png",
       "price": 7.5
     },
     {
@@ -87,7 +87,7 @@
       "color": "white",
       "category": "wedding",
       "description": "Elegant white flowers, perfect for weddings.",
-      "picture": "lily_of_the_valley.png",
+      "picture": "Lily of the Valley.png",
       "price": 5.5
     },
     {

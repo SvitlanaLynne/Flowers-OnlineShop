@@ -12,6 +12,17 @@ _Homepage:_ Browse through a table of products, apply filters, and sort by vario
 _Product Details:_ Click on a product to view its details on a separate page using React Router.
 Let's get started!
 
+## Run the App on your local machine
+
+To run this app, please follow these instructions:
+
+_Clone the Repository:_ git clone https://github.com/SvitlanaLynne/Flowers-OnlineShop.git  then cd Flowers-OnlineShop
+_Install Dependencies:_ npm install
+_Install JSON Server:_ npm install -g json-server
+_Start JSON Server:_ json-server --watch db.json
+_Start React App:_ npm start
+
+
 ## Deeper into dev details:
 
 - Home and Product Details pages with components like logos, buttons, and icons.
